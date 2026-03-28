@@ -4,20 +4,20 @@ from Dice import Dice
 class Horse:
     def __init__(self, speed, y, image, window):
         #Starting position
-        self.x = 100
-        self.y = y
+        self.x_pos = 100
+        self.y_pos = y
         self.image = image
         self.window = window
         self.dice = Dice(speed)
 
     def move(self):
-        self.x += self.dice.roll()
+        self.x_pos += self.dice.roll()
 
     def draw(self):
-        self.image.draw_at_pos(self.window, self.x, self.y)
+        self.image.draw_at_pos(self.window, self.x_pos, self.y_pos)
 
     def crossed_finish_line(self, finish_x):
-        return self.x >= finish_x
+        return self.x_pos >= finish_x
 
 def main():
     win = GraphWin("Pokemon Race", 1650, 800, autoflush = False)
