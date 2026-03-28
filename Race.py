@@ -4,7 +4,7 @@ from Dice import Dice
 class Horse:
     def __init__(self, speed, y, image, window):
         #Starting position
-        self.x_pos = 100
+        self.x_pos = 0
         self.y_pos = y
         self.image = image
         self.window = window
